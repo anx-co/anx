@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AX // 02 · CUBO RGB</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/core.css"><link rel="stylesheet" href="css/anim.css"><link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<div class="bg-video"><video id="vid" muted loop playsinline autoplay preload="auto"></video><div class="bg-video-ov"></div></div>
+<canvas id="fx"></canvas>
+<div class="grain"></div><div class="scanlines"></div><div class="vignette"></div>
+<div class="cursor-dot" id="curDot"></div><div class="cursor-ring" id="curRing"></div>
+
+<header class="nav">
+  <a class="brand" href="index.html"><span class="brand-txt">A<span class="brand-x">X</span></span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">INICIO</a><a href="subpagina1.html">01·NÚCLEO</a>
+    <a href="subpagina2.html" class="is-on">02·CUBO</a><a href="subpagina3.html">03·ARCADE</a><a href="subpagina4.html">04·TERMINAL</a>
+  </nav>
+  <div class="nav-right"><span class="pill mono" id="clock">--:--:--</span><button class="burger" id="burger">≡</button></div>
+</header>
+
+<main class="wrap">
+  <section class="page-head">
+    <p class="kicker mono">SUBSISTEMA 02 // GEOMETRÍA</p>
+    <h1 class="glitch" data-text="CUBO RGB">CUBO RGB</h1>
+    <p class="dim">Núcleo de luz rotando en 3D real. Ajusta velocidad, escala y tono; arrastra para girarlo tú.</p>
+  </section>
+
+  <section class="two">
+    <div class="panel stage" id="stage">
+      <div class="cube" id="cube">
+        <i></i><i></i><i></i><i></i><i></i><i></i>
+        <div class="core"></div>
+      </div>
+    </div>
+    <div class="panel controls">
+      <h3>CONTROLES</h3>
+      <label>VELOCIDAD <b class="mono" id="vSpeed">1.0x</b></label>
+      <input type="range" id="speed" min="0" max="30" value="10">
+      <label>ESCALA <b class="mono" id="vScale">1.0x</b></label>
+      <input type="range" id="scale" min="60" max="200" value="100">
+      <label>TONO <b class="mono" id="vHue">0°</b></label>
+      <input type="range" id="hue" min="0" max="360" value="0">
+      <p class="mono dim" style="font-size:.75rem;margin-top:.6rem">arrastra sobre el cubo para girarlo manualmente</p>
+      <button class="btn btn-sm" id="auto"><span>REANUDAR AUTO</span><b class="btn-arrow">↻</b></button>
+    </div>
+  </section>
+</main>
+<footer class="foot"><div class="wrap foot-in"><span class="mono dim">AX // 02 CUBO</span><span class="mono dim">© <span id="year"></span></span></div></footer>
+<script src="js/ui.js"></script><script src="js/sub2.js"></script>
+</body>
+</html>

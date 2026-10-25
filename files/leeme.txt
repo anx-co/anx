@@ -1,0 +1,6 @@
+Coloca aquí tu video de fondo.
+Nombres que el sitio busca, en este orden:
+  video1.mp4  →  video1.webm  →  video1.mov  →  video1.m4v  →  video1.ogv  →  video1.mp3
+Si tu archivo se llama video1.mp3 (o contiene video en un contenedor raro),
+lo detectará igual: el orden es solo una preferencia.
+Recomendado: mp4 H.264, 1920x1080, 10-20 s en bucle, menos de 6 MB.

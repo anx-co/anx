@@ -1,0 +1,10 @@
+{
+  "name": "ax-sitio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "hash": "node scripts/hash-password.mjs",
+    "serve": "npx --yes serve ."
+  }
+}

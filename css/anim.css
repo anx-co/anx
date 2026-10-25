@@ -1,0 +1,58 @@
+/* ================= KEYFRAMES ================= */
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes rgbSlide{to{background-position:400% 0}}
+@keyframes glitchA{0%,92%,100%{transform:translate(0,0)}93%{transform:translate(-6px,2px)}95%{transform:translate(5px,-3px)}97%{transform:translate(-3px,-1px)}}
+@keyframes glitchB{0%,90%,100%{transform:translate(0,0)}91%{transform:translate(6px,-2px)}94%{transform:translate(-5px,3px)}96%{transform:translate(3px,1px)}}
+@keyframes glitchC{0%,88%,100%{transform:translate(0,0)}89%{transform:translate(-4px,-4px)}93%{transform:translate(4px,4px)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@keyframes blink{50%{opacity:0}}
+@keyframes shake{10%,90%{transform:translateX(-3px)}20%,80%{transform:translateX(5px)}30%,50%,70%{transform:translateX(-7px)}40%,60%{transform:translateX(7px)}}
+@keyframes riseIn{from{opacity:0;transform:translateY(28px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes shine{0%{transform:translateX(-120%) skewX(-18deg)}100%{transform:translateX(220%) skewX(-18deg)}}
+@keyframes hueCycle{to{filter:hue-rotate(360deg)}}
+@keyframes borderRun{to{background-position:400% 0}}
+@keyframes scanDown{0%{transform:translateY(-100%)}100%{transform:translateY(100%)}}
+
+/* ================= MEGA AX ================= */
+.mega-wrap{position:relative;display:inline-block;line-height:.82;margin-bottom:.6rem}
+.mega-wrap span{display:block;font-family:var(--f1);font-weight:900;font-size:clamp(5.5rem,24vw,17rem);letter-spacing:.02em}
+.mega-base{position:relative;z-index:3;
+  background:linear-gradient(90deg,var(--cy),var(--vi),var(--mg),var(--or),var(--lm),var(--cy));
+  background-size:400% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:rgbSlide 5s linear infinite;
+  filter:drop-shadow(0 0 34px rgba(0,240,255,.35)) drop-shadow(0 0 70px rgba(255,0,229,.22))}
+.mega-layer{position:absolute;inset:0;z-index:1;mix-blend-mode:screen;opacity:.85;pointer-events:none}
+.l-cy{color:var(--cy);animation:glitchA 4.5s infinite steps(1)}
+.l-mg{color:var(--mg);animation:glitchB 3.7s infinite steps(1)}
+.l-lm{color:var(--lm);opacity:.55;animation:glitchC 5.4s infinite steps(1)}
+.mega-shine{position:absolute;inset:0;z-index:4;overflow:hidden;pointer-events:none}
+.mega-shine::after{content:"";position:absolute;top:0;bottom:0;width:22%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);animation:shine 4.5s ease-in-out infinite}
+
+/* ================= GLITCH TEXTO ================= */
+.glitch{position:relative;display:inline-block}
+.glitch::before,.glitch::after{content:attr(data-text);position:absolute;inset:0;pointer-events:none}
+.glitch::before{color:var(--mg);animation:glitchA 3.6s infinite steps(1);mix-blend-mode:screen}
+.glitch::after{color:var(--cy);animation:glitchB 4.4s infinite steps(1);mix-blend-mode:screen}
+
+/* ================= BOOT ================= */
+.boot{position:fixed;inset:0;z-index:9000;display:grid;place-items:center;background:#04050a;transition:opacity .6s,visibility .6s}
+.boot.done{opacity:0;visibility:hidden}
+.boot-box{width:min(560px,88vw);text-align:center}
+.boot-logo{font-family:var(--f1);font-weight:900;font-size:clamp(3rem,14vw,6rem);
+  background:linear-gradient(90deg,var(--cy),var(--mg),var(--lm),var(--cy));background-size:300% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:rgbSlide 2.2s linear infinite}
+.boot-log{text-align:left;font-size:.75rem;color:var(--cy);min-height:9.5em;white-space:pre-wrap;margin:1rem 0}
+.boot-bar{height:4px;border:1px solid var(--stroke);border-radius:99px;overflow:hidden}
+.boot-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cy),var(--mg));transition:width .3s}
+.boot-tip{margin-top:.7rem;font-size:.66rem;letter-spacing:.28em;color:var(--dim);animation:blink 1.2s steps(1) infinite}
+
+/* ================= REVEAL ================= */
+[data-rv]{opacity:0}
+[data-rv].in{animation:riseIn .7s cubic-bezier(.2,.7,.2,1) forwards}
+
+/* ================= EXTRAS ================= */
+.shake{animation:shake .5s}
+.hue{animation:hueCycle 12s linear infinite}
+.blink{animation:blink 1s steps(1) infinite}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AX // NÚCLEO PRINCIPAL</title>
+<meta name="description" content="AX — interfaz holográfica RGB con tablero de subsistemas.">
+<meta name="theme-color" content="#04050a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/core.css">
+<link rel="stylesheet" href="css/anim.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body class="page-home">
+
+<div class="bg-video">
+  <video id="vid" muted loop playsinline autoplay preload="auto"></video>
+  <div class="bg-video-ov"></div>
+</div>
+<canvas id="fx"></canvas>
+<div class="grain"></div>
+<div class="scanlines"></div>
+<div class="vignette"></div>
+<div class="cursor-dot" id="curDot"></div>
+<div class="cursor-ring" id="curRing"></div>
+
+<div class="boot" id="boot">
+  <div class="boot-box">
+    <div class="boot-logo" data-text="AX">AndreX</div>
+    <pre class="boot-log mono" id="bootLog"></pre>
+    <div class="boot-bar"><i id="bootBar"></i></div>
+    <div class="boot-tip mono">INICIALIZANDO NÚCLEO…</div>
+  </div>
+</div>
+
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="AX inicio">
+    <span class="brand-txt">A<span class="brand-x">X</span></span>
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html" class="is-on">INICIO</a>
+    <a href="subpagina1.html">01·NÚCLEO</a>
+    <a href="subpagina2.html">02·CUBO</a>
+    <a href="subpagina3.html">03·ARCADE</a>
+    <a href="subpagina4.html">04·TERMINAL</a>
+  </nav>
+  <div class="nav-right">
+    <span class="pill mono" id="clock">--:--:--</span>
+    <button class="burger" id="burger" aria-label="menú">≡</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <div class="hero-badges mono">
+      <span class="badge">SYSTEM ONLINE</span>
+      <span class="badge badge-mg">RGB CORE v4.1</span>
+      <span class="badge badge-lm">SHA-256</span>
+    </div>
+
+    <div class="mega-wrap" data-par="14">
+      <span class="mega-layer l-cy">AndreX</span>
+      <span class="mega-layer l-mg">AndreX</span>
+      <span class="mega-layer l-lm">AndreX</span>
+      <span class="mega-base">AndreX</span>
+      <span class="mega-shine"></span>
+    </div>
+
+    <p class="hero-sub mono" id="typer"></p>
+    <p class="hero-txt">
+      Interfaz holográfica con núcleo RGB animado, tablero de subsistemas y
+      acceso privado cifrado. Cuatro módulos, cero aburrimiento.
+    </p>
+
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="subpagina1.html"><span>ENTRAR AL NÚCLEO</span><b class="btn-arrow">→</b></a>
+      <a class="btn btn-ghost" href="#tablero"><span>VER TABLERO</span><b class="btn-arrow">↓</b></a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat"><b data-count="4">0</b><span>MÓDULOS</span></div>
+      <div class="stat"><b data-count="256">0</b><span>BITS DE CIFRADO</span></div>
+      <div class="stat"><b data-count="60">0</b><span>FPS DE NÚCLEO</span></div>
+      <div class="stat"><b data-count="100">0</b><span>% PRIVADO</span></div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track mono">
+      <span>AX</span><i></i><span>NÚCLEO RGB</span><i></i><span>LOGIN CIFRADO SHA-256</span><i></i>
+      <span>TABLERO DE SUBSISTEMAS</span><i></i><span>4 MÓDULOS ACTIVOS</span><i></i>
+      <span>AX</span><i></i><span>NÚCLEO RGB</span><i></i><span>LOGIN CIFRADO SHA-256</span><i></i>
+      <span>TABLERO DE SUBSISTEMAS</span><i></i><span>4 MÓDULOS ACTIVOS</span><i></i>
+    </div>
+  </div>
+
+  <section id="tablero" class="wrap board">
+    <div class="board-head">
+      <div>
+        <h2 class="glitch" data-text="TABLERO DE SUBSISTEMAS">TABLERO DE SUBSISTEMAS</h2>
+        <p class="dim mono">Selecciona un módulo. El módulo 01 exige credencial.</p>
+      </div>
+      <div class="board-status mono">
+        <span class="led led-ok"></span> ENLACE ESTABLE
+      </div>
+    </div>
+
+    <div class="grid">
+      <article class="tile" data-tilt data-rv>
+        <div class="tile-glow"></div>
+        <div class="tile-top"><span class="tile-num mono">01</span><span class="led led-cy"></span></div>
+        <h3 class="tile-title">NÚCLEO</h3>
+        <p class="tile-desc">Panel privado con login obligatorio y contraseña cifrada en SHA-256 al subir a GitHub.</p>
+        <ul class="tile-tags mono"><li>LOGIN</li><li>SHA-256</li><li>PRIVADO</li></ul>
+        <a class="btn btn-sm" href="subpagina1.html"><span>ABRIR</span><b class="btn-arrow">→</b></a>
+      </article>
+
+      <article class="tile" data-tilt data-rv>
+        <div class="tile-glow"></div>
+        <div class="tile-top"><span class="tile-num mono">02</span><span class="led led-mg"></span></div>
+        <h3 class="tile-title">CUBO RGB</h3>
+        <p class="tile-desc">Cubo 3D real con núcleo de luz, controles de velocidad, escala y tono.</p>
+        <ul class="tile-tags mono"><li>3D</li><li>CSS</li><li>TIEMPO REAL</li></ul>
+        <a class="btn btn-sm" href="subpagina2.html"><span>ABRIR</span><b class="btn-arrow">→</b></a>
+      </article>
+
+      <article class="tile" data-tilt data-rv>
+        <div class="tile-glow"></div>
+        <div class="tile-top"><span class="tile-num mono">03</span><span class="led led-lm"></span></div>
+        <h3 class="tile-title">ARCADE</h3>
+        <p class="tile-desc">Minijuego arcade con canvas, puntuación, niveles, récord local y sonido.</p>
+        <ul class="tile-tags mono"><li>JUEGO</li><li>CANVAS</li><li>RÉCORD</li></ul>
+        <a class="btn btn-sm" href="subpagina3.html"><span>ABRIR</span><b class="btn-arrow">→</b></a>
+      </article>
+
+      <article class="tile" data-tilt data-rv>
+        <div class="tile-glow"></div>
+        <div class="tile-top"><span class="tile-num mono">04</span><span class="led led-or"></span></div>
+        <h3 class="tile-title">TERMINAL</h3>
+        <p class="tile-desc">Consola interactiva con comandos, historial y lluvia matrix activable.</p>
+        <ul class="tile-tags mono"><li>CONSOLA</li><li>COMANDOS</li><li>MATRIX</li></ul>
+        <a class="btn btn-sm" href="subpagina4.html"><span>ABRIR</span><b class="btn-arrow">→</b></a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span class="mono dim">AX // NÚCLEO PRINCIPAL</span>
+    <span class="mono dim">© <span id="year"></span> — hecho con luces y electricidad</span>
+  </div>
+</footer>
+
+<noscript><style>#boot{display:none}body{cursor:auto}.cursor-dot,.cursor-ring{display:none}</style></noscript>
+<script src="js/ui.js"></script>
+</body>
+</html>
